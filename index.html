@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salesforce Certification Course</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .offcanvas {
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            background-color: #f3f4f6;
+            
+        }
+
+        .offcanvas.open {
+            transform: translateX(0);
+        }
+
+        .content-blur {
+            filter: blur(5px);
+            transition: filter 0.3s ease;
+        }
+
+        details[open] summary ~ * {
+            animation: sweep .5s ease-in-out;
+        }
+
+        @keyframes sweep {
+            0%    {opacity: 0; margin-top: -10px;}
+            100%  {opacity: 1; margin-top: 0px;}
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 md:px-20 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-500"><a href="https://www.ilearningscareer.com">iLearnings</a>
+            </div>
+            <nav>
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-blue-500 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <ul class="hidden md:flex items-center space-x-10 font-semibold">
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">Corporate Training</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">Hire From Us</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-500">Explore Courses</a></li>
+                    <button class="hidden md:block bg-blue-500 text-white py-2 px-4 rounded">Login</button>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Off-Canvas Menu -->
+    <aside id="offcanvas-menu" class="fixed inset-y-0 right-0 w-64 p-4 offcanvas z-20 md:hidden">
+        <div class="flex justify-between items-center mb-4">
+            <div class="text-xl font-bold text-gray-700">iLearnings</div>
+            <button id="close-menu-button" class="text-gray-700 hover:text-gray-900 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <ul class="space-y-4">
+            <li><a href="#" class="text-gray-700 hover:text-gray-900">Corporate Training</a></li>
+            <li><a href="#" class="text-gray-700 hover:text-gray-900">Hire From Us</a></li>
+            <li><a href="#" class="text-gray-700 hover:text-gray-900">Explore Courses</a></li>
+            <button class="bg-blue-500 text-white py-2 px-4 rounded">Login</button>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container mx-auto md:my-24 px-6 md:px-20 py-10 ">
+        <div class="overflow-hidden">
+            <div class="flex flex-col md:flex-row">
+                <!-- Text Content -->
+                <div class="w-full md:w-2/3 p-8 md:pe-44 flex flex-col justify-center">
+                    <h1 class="text-3xl font-bold mb-4 text-4xl">
+                        Salesforce Training
+                    </h1>
+                    <p class="text-gray-700 mb-6 text-xl">We are dedicated to empowering individuals and businesses
+                        through
+                        comprehensive Salesforce education. As a leading EdTech company specializing in Salesforce, we
+                        offer a range of plans and courses designed to transform your Salesforce journey.</p>
+
+                </div>
+                <!-- Image/Video Content -->
+                <div class="w-full md:w-1/3 flex items-center justify-center p-8">
+                    <img src="img.avif" alt="Course Image" class="rounded-lg">
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <!-- Plans -->
+    <div class="w-full p-8 flex flex-col justify-center items-center md:mt-24">
+        <h1 class="text-3xl font-bold mb-4 text-2xl">
+            Explore our Plans
+        </h1>
+        <p class="text-gray-700 mb-6 text-md text-center md:px-56">Embark on a personalized learning journey with our
+            diverse range of plans tailored to suit your unique educational needs. Whether you're a beginner seeking
+            foundational knowledge or an advanced learner looking to deepen your expertise, our thoughtfully crafted
+            plans offer a roadmap to success. Explore the intricacies of Salesforce with courses designed for every
+            skill level and unlock a world of opportunities.</p>
+
+    </div>
+
+
+    <div class="flex flex-col md:flex-row md:px-20">
+
+
+        <!-- Premium Content -->
+        <div id="premium-content" class="container mx-auto px-6 md:px-20 py-10 ">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden h-[40rem]">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Text Content -->
+                    <div class="p-8">
+                        <h1 class="text-3xl font-bold mb-10 text-center text-blue-500">
+                            Premium
+                        </h1>
+
+                        <ul class="list-disc list-inside space-y-2 mb-6">
+                            <li>Premium Salesforce 1-1 Instructor Led Training</li>
+                            <li>90 days duration of the course</li>
+                            <li>Lifetime access to class recordings</li>
+                            <li>24/7 Support</li>
+                            <li>Mock Interviews</li>
+                            <li>Certification Practice Sessions</li>
+                            <li>Premium Live Project Internship</li>
+                            <li>Soft Skills Program</li>
+                            <li>Career Mentoring Sessions</li>
+                            <li>Interview calls/Placement Assistance</li>
+                            <li>Global Certification</li>
+                            <li>Resume & LinkedIn Profile Building</li>
+                        </ul>
+                        <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+                            <button class="bg-blue-500 text-white py-2 px-4 rounded">Apply Now</button>
+                            <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded">Download Brochure</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!--Professional Content-->
+        <div id="professional-content" class="container mx-auto px-6 md:px-20 py-10 ">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden h-[40rem]">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Text Content -->
+                    <div class="p-8">
+                        <h1 class="text-3xl font-bold mb-10 text-center text-gray-500">
+                            Professional
+                        </h1>
+                        <ul class="list-disc list-inside space-y-2 mb-6">
+                            <li>Premium Salesforce 1-1 Instructor Led Training</li>
+                            <li>75 days duration of the course</li>
+                            <li>Lifetime access to class recordings</li>
+                            <li>Lifetime access to class recordings</li>
+                            <li>24/7 Support</li>
+                            <li>Mock Interviews</li>
+                            <li>Interview calls/Placement Assistance</li>
+                        </ul>
+                        <div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
+                            <button class="bg-blue-500 text-white py-2 px-4 rounded">Apply Now</button>
+                            <button class="bg-gray-200 text-gray-700 py-2 px-4 rounded">Download Brochure</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Courses -->
+    <div class="md:px-44" >
+
+    
+    
+    <div class="container mx-auto p-6">
+        <h1 class="text-3xl font-bold mb-4 text-center mt-24">Courses We Offer</h1>
+        <p class="mb-8 text-gray-700 text-center pb-20">
+            Explore a variety of courses designed to cater to your learning preferences. From Salesforce administration to development, Lightning Web Components, business analysis, and beyond, our courses cover a spectrum of topics. Dive into the specifics of Marketing Cloud, CPQ, MuleSoft, OmniStudio, Commerce Cloud, and more. Join live classes for an interactive and engaging learning experience.
+        </p>
+        <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-2">Salesforce Admin</h2>
+                <p class="text-gray-600 mb-4 text-sm">Master the art of Salesforce administration with hands-on exercises and real-world scenarios.</p>
+                <p class="font-semibold">Enrolled - 5078</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-2">Salesforce Development</h2>
+                <p class="text-gray-600 mb-4 text-sm">Dive deep into the development side of Salesforce, covering Apex coding, Visualforce, and integration techniques.</p>
+                <p class="font-semibold">Enrolled - 3056</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-2">Lightning Web Components</h2>
+                <p class="text-gray-600 mb-4 text-sm">Harness the power of Lightning Web Components for modern and responsive user interfaces.</p>
+                <p class="font-semibold">Enrolled - 1221</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-2">Business Analysis</h2>
+                <p class="text-gray-600 mb-4 text-sm">Acquire skills in analyzing business processes and requirements for effective Salesforce implementations.</p>
+                <p class="font-semibold">Enrolled - 2203</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-2">Marketing Cloud</h2>
+                <p class="text-gray-600 mb-4 text-sm">Learn to leverage Salesforce Marketing Cloud for targeted and impactful marketing campaigns.</p>
+                <p class="font-semibold">Enrolled - 1102</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-2">CPQ</h2>
+                <p class="text-gray-600 mb-4 text-sm">Streamline your sales processes with expertise in Salesforce CPQ solutions.</p>
+                <p class="font-semibold">Enrolled - 1845</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-2">MuleSoft</h2>
+                <p class="text-gray-600 mb-4 text-sm">Acquire skills in analyzing business processes and requirements for effective Salesforce implementations.</p>
+                <p class="font-semibold">Enrolled - 2203</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-2">OmniStudio</h2>
+                <p class="text-gray-600 mb-4 text-sm">Learn to leverage Salesforce Marketing Cloud for targeted and impactful marketing campaigns.</p>
+                <p class="font-semibold">Enrolled - 1102</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h2 class="text-lg font-bold mb-2">Commerce Studio</h2>
+                <p class="text-gray-600 mb-4 text-sm">Streamline your sales processes with expertise in Salesforce CPQ solutions.</p>
+                <p class="font-semibold">Enrolled - 1845</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Frequently Asked Questions Section -->
+<div class="p-6 rounded-lg mb-12 md:mx-44">
+    <h2 class="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+        <details class="p-4 bg-white rounded-lg">
+            <summary class="font-semibold cursor-pointer">Are live classes available for all courses?</summary>
+            <p class="mt-2">Yes, we offer live classes for a dynamic and interactive learning experience. Check the course details to find information about the schedule and availability of live classes.</p>
+        </details>
+        <details class="p-4 bg-white rounded-lg">
+            <summary class="font-semibold cursor-pointer">What is the duration of each course?</summary>
+            <p class="mt-2">The duration varies for each course. You can find specific details on the course page. Some courses are self-paced, while others may have a fixed duration with scheduled classes.</p>
+        </details>
+        <details class="p-4 bg-white rounded-lg">
+            <summary class="font-semibold cursor-pointer">Are there prerequisites for specific courses?</summary>
+            <p class="mt-2">Prerequisites vary depending on the course. Check the course description for detailed information on any required background or skills.</p>
+        </details>
+        <details class="p-4 bg-white rounded-lg">
+            <summary class="font-semibold cursor-pointer">How do I access course materials?</summary>
+            <p class="mt-2">Upon enrollment, you will receive access to our online learning platform, where you can find all course materials, resources, and recordings of live classes.</p>
+        </details>
+        <details class="p-4 bg-white rounded-lg">
+            <summary class="font-semibold cursor-pointer">Is certification provided upon course completion?</summary>
+            <p class="mt-2">Yes, upon successful completion of the course, you will receive a certification. This certification acknowledges your achievement and can be a valuable asset in your professional journey.</p>
+        </details>
+    </div>
+</div>
+
+<!-- Subscribe Section -->
+<div class="bg-gradient-to-r from-blue-700 to-indigo-700 p-8 rounded-lg shadow-md mb-12 text-white text-center md:px-20 md:mx-44">
+    <h2 class="text-3xl font-bold mb-4">Ready to Elevate Your Skills and Career?</h2>
+    <p class="mb-6">Unlock a world of possibilities by subscribing to ILearning. Gain access to industry-leading IT courses, hands-on projects, and personalized learning experiences. Stay ahead in the dynamic IT landscape and position yourself for success.</p>
+    <a href="#" class="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded">Subscribe for Course Updates</a>
+</div>
+</div>
+
+<!-- Footer Section -->
+<footer class="bg-black text-white py-8 md:px-56 md:py-10">
+<div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+    <div class="mb-6 md:mb-0">
+        <a href="#" class="text-white text-2xl font-bold">iLearnings</a>
+    </div>
+    <div class="flex space-x-8">
+        <div>
+            <h3 class="font-semibold mb-2">Discover</h3>
+            <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">About Us</a></li>
+                <li><a href="#" class="hover:underline">Courses</a></li>
+                <li><a href="#" class="hover:underline">Programs</a></li>
+                <li><a href="#" class="hover:underline">Blogs</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="font-semibold mb-2">Connect</h3>
+            <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">Contact Us</a></li>
+                <li><a href="#" class="hover:underline">FAQ</a></li>
+                <li><a href="#" class="hover:underline">Testimonial</a></li>
+                <li><a href="#" class="hover:underline">Webinar</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3 class="font-semibold mb-2">Resources</h3>
+            <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+                <li><a href="#" class="hover:underline">Terms of Services</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</footer>
+
+
+
+
+
+
+
+
+    <!-- Script for off-canvas menu toggle -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const closeMenuButton = document.getElementById('close-menu-button');
+        const offcanvasMenu = document.getElementById('offcanvas-menu');
+        const mainContent = document.getElementById('main-content');
+
+        mobileMenuButton.addEventListener('click', () => {
+            offcanvasMenu.classList.add('open');
+            mainContent.classList.add('content-blur');
+        });
+
+        closeMenuButton.addEventListener('click', () => {
+            offcanvasMenu.classList.remove('open');
+            mainContent.classList.remove('content-blur');
+        });
+    </script>
+</body>
+
+</html>
